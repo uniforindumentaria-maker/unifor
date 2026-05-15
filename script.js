@@ -26,3 +26,16 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+// Seguridad extra por si el menú no existe
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
