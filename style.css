@@ -1363,3 +1363,27 @@ Satisfacción Cliente
         height: 1300px;
     }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* oculto por defecto */
+  }
+
+  .nav-menu.active {
+    display: flex; /* se muestra al hacer click */
+  }
+}
+
+.nav-menu {
+  transition: all 0.3s ease;
+}
